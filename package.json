@@ -1,22 +1,35 @@
 {
-	"name": "@ff6347/trashor-art",
-	"type": "module",
-	"private": true,
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/solid-js": "2.1.0",
-		"astro": "2.3.1",
-		"p5": "1.6.0",
-		"solid-js": "^1.4.3"
-	},
-	"devDependencies": {
-		"@types/p5": "1.6.1"
-	}
+  "name": "@ff6347/trashor-art",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "2.1.0",
+    "astro": "2.3.1",
+    "p5": "1.6.0",
+    "solid-js": "^1.4.3"
+  },
+  "devDependencies": {
+    "@types/p5": "1.6.1"
+  },
+  "description": "a trash or art project by ff6347",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ff6347/trashor.art.git"
+  },
+  "keywords": [],
+  "author": "ff6347 <hash@ff6347.email>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ff6347/trashor.art/issues"
+  },
+  "homepage": "https://github.com/ff6347/trashor.art#readme"
 }
