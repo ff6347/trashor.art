@@ -1,7 +1,7 @@
 import { createSignal } from "solid-js";
 import p5 from "p5";
 
-const Sketch = () => {
+const HelloWorld = () => {
 	let x = 50;
 	let y = 50;
 
@@ -36,4 +36,4 @@ const Sketch = () => {
 	);
 };
 
-export default Sketch;
+export default HelloWorld;

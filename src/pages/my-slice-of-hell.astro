@@ -1,10 +1,12 @@
 ---
-// Component Imports
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+import MySliceOfHellVen from "../components/MySliceOfHellVen";
+// Component Imports
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <DefaultLayout>
-	<a href="/my-slice-of-hell">My Slice of Hell</a>
+	<MySliceOfHellVen client:only="solid-js" />
 </DefaultLayout>
