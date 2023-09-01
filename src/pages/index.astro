@@ -1,10 +1,47 @@
 ---
 // Component Imports
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Layout from "../layouts/Layout.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<DefaultLayout>
-	<a href="/my-slice-of-hell">My Slice of Hell</a>
-</DefaultLayout>
+<Layout title="Is this Trash or Art?">
+	<div class="container">
+		<ul>
+			<li>
+				<a href="/my-slice-of-hell">My Slice of Hell</a>
+			</li>
+			<li>
+				<a href="/ist-heute-ein-feiertag">Ist Heute ein Feiertag?</a>
+			</li>
+		</ul>
+	</div>
+</Layout>
+
+<style is:global>
+	body {
+		height: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	main {
+		height: calc(100vh - 20px);
+		display: flex !important;
+		justify-content: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100vw;
+	}
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+	ul > li {
+		list-style: none;
+	}
+</style>

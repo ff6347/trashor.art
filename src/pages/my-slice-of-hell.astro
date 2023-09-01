@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import MySliceOfHellVen from "../components/MySliceOfHellVen";
 // Component Imports
 
@@ -7,6 +7,6 @@ import MySliceOfHellVen from "../components/MySliceOfHellVen";
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<DefaultLayout>
+<Layout title="My Little Slice of Hell">
 	<MySliceOfHellVen client:only="solid-js" />
-</DefaultLayout>
+</Layout>

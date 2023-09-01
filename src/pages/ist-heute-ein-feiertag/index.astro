@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h2 id="target"></h2>
+	</main>
+</Layout>
+
+<script>
+	document.addEventListener("DOMContentLoaded", async () => {
+		const target: HTMLElement | null = document.getElementById("target");
+		if (!target) return;
+		const now = new Date();
+		const url = `https://feiertage-api.de/api/?nur_daten&jahr=${now.getFullYear()}`;
+		const response = await fetch(url);
+		console.log(url);
+		if (!response.ok) {
+			throw new Error(response.statusText);
+		}
+		const data = (await response.json()) as Record<string, string>;
+		console.log(data);
+		// Check if today's date is in the data
+		const today = now.toISOString().substring(0, 10);
+		const [matchedKey] =
+			Object.entries(data).find(([key, value]) => value === today) || [];
+		console.log(`Today's holiday: ${matchedKey || "none"}`);
+		const isTodayHoliday = Object.values(data).includes(today);
+		console.log(`Is today a holiday? ${isTodayHoliday}`);
+		if (isTodayHoliday) {
+			target.innerHTML = `Yay! Heute ist ${matchedKey} 🎉`;
+		} else {
+			target.innerHTML = `Leider ist heute kein Feiertag. 😢`;
+		}
+	});
+</script>
+
+<style>
+	main {
+		margin: 0 auto;
+
+		max-width: calc(100% - 50vw);
+		color: black;
+		font-size: 20px;
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+</style>
