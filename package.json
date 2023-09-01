@@ -11,13 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/solid-js": "2.1.0",
-    "astro": "2.3.1",
+    "@astrojs/solid-js": "3.0.0",
+    "astro": "3.0.5",
     "p5": "1.6.0",
     "solid-js": "^1.4.3"
   },
   "devDependencies": {
-    "@types/p5": "1.6.1"
+    "@types/p5": "1.6.1",
+    "cz-conventional-changelog": "3.3.0"
   },
   "description": "a trash or art project by ff6347",
   "main": "index.js",
@@ -31,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/ff6347/trashor.art/issues"
   },
-  "homepage": "https://github.com/ff6347/trashor.art#readme"
+  "homepage": "https://github.com/ff6347/trashor.art#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
